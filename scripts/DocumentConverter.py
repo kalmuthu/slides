@@ -229,4 +229,3 @@ if __name__ == "__main__":
     except ErrorCodeIOException as exception:
         print("ERROR! ErrorCodeIOException %d" % exception.ErrCode)
         exit(1)
-
