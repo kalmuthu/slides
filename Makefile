@@ -59,13 +59,15 @@ all: $(ALL)
 $(ODP_PPT): %.ppt: %.odp $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)rm -f $@
-	$(Q)scripts/DocumentConverter.py $< $@
+	$(Q)unoconv --format ppt $<
 	$(Q)chmod 444 $@
+#$(Q)scripts/DocumentConverter.py $< $@
 $(ODP_PDF): %.pdf: %.odp $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)rm -f $@
-	$(Q)scripts/DocumentConverter.py $< $@
+	$(Q)unoconv --format pdf $<
 	$(Q)chmod 444 $@
+#$(Q)scripts/DocumentConverter.py $< $@
 
 .PHONY: soffice
 soffice:
