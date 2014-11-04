@@ -1,4 +1,4 @@
-- make automatic upload to slideshare and stuff.
+- make automatic upload to slideshare and scribd.
 - write slides about room for optimization.
 - write slides about allocating memory fast.
 - write slides about patterns.
