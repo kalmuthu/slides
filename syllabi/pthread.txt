@@ -5,24 +5,66 @@ Requirements
 	- hands on familiarity with command line writing, compiling running and debugging on linux and/or unix.
 Topics
 	- the linux threading model.
+		the fork API
+		the clone API
 	- your very first thread.
 	- seeing thread information on the command line.
-	- suspending a thread.
-	- thread termination.
-	- thread cancellation.
-	- TLS.
+		- using ps
+		- using top
+		- using /proc
+	- thread ids
+		- why are there two ids
+		- pthread_self(3), pthread_equal(3)
+		- gettid(2)
+		- giving names to threads
+			pthread_setname_np(3)
+			prctl(2)
+	- thread death
+		- suspending a thread.
+		- pthread_exit(3)
+		- pthread_kill(3)
+		- pthread_cancel(3)
+		- pthread_setcancelstate(3), pthread_setcanceltype(3)
+		- thread cancellation.
+		- masking cancellation.
+		- joining a thread.
+		- detaching a thread so it can't be joined.
+		- cleanup function registrations at thread death.
+	- TLS (thread local storage).
+		- the pthread way.
+		- the C++ way.
+		- other options
 	- threads and signals.
 		- sending signals to threads.
-	- joining threads and detached threads.
-	- threads and scheduling/affinity.
+		- what happens when a signal arrives at a thread?
+		- signal queues for real time signals.
+		- masking signals.
 	- threads synchronization mechanisms:
 		- barriers
 		- conditions.
-		- mutexes.
+		- mutexes (futexes)
 		- spin locks.
 		- rwlocks.
+	- threads and cores
+		- knowing on which core you are running.
+		- cpu affinity.
+			at thread creation time.
+			using taskset.
+		- yielding the CPU.
+		- scheduling classes and priorities.
 	- threads and time
-		- sleeping in theads.
+		- sleeping in threads.
 		- pausing in threads.
 		- a thread cpu clock.
+		- setting the thread cpu clock
 	- inter-thread communication options.
+		- simple implementation of a message queue.
+	- stacks of threads.
+		- controlling the sizes of stacks
+		- stack guards
+		- knowing if you are close to the edge.
+	- misc
+		- ASLR and how it effects threads.
+		- thread at_fork hooks
+		- pthread_once
+		- what happens when a thread does execve? answer - all threads die automatically
