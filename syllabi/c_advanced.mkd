@@ -1,0 +1,121 @@
+Syllabus for a C advanced course:
+=================================
+NTH: Nice To Have
+Anything which is not marked NTH is the main material.
+
+Design patterns in C
+--------------------
+* designing a sustainable API in C.
+* using opaque pointers.
+* ensuring type safetiness on opaque pointers.
+* object oriented in C.
+* inheritance in C.
+* composition in C.
+* multiple inheritance in C.
+* Type information in C.
+* Run time overloading of methods in C.
+* Run time creation of new classes in C.
+* Run time queries of types (with polymorphism).
+* techniques for avoiding client re compilation in C.
+* communication by registration of hooks.
+* exception handling in C. (NTH)
+
+List of patterns to consider (select the ones you want)
+-------------------------------------------------------
+* cretional
+	- Factory
+	- Abstract Factory
+	- Factory method
+	- Lazy initialization
+	- Object pool
+	- Prototype
+	- Resource acquisition is initialization
+	- Singleton
+* Structural
+	- Adapter/Wrapper/Translator
+	- Bridge
+	- Composite
+	- Decorator
+	- Facade
+	- Flyweight
+	- Proxy
+* Behavioral
+	- Chain of responsibility
+	- Command
+	- Interpreter
+	- Iterator
+	- Mediator
+	- Null Object
+	- Observer/Publish-Subscribe
+	- State
+	- Strategy
+	- Template method
+	- Visitor
+
+Debugging using gdb and friends
+-------------------------------
+* configuring source code locations.
+* calling functions
+* changing variables on the fly.
+* reverse debugging.
+* pretty printing of structures.
+* Hardware breakpoints as opposed to software ones.
+
+Memory leaks and memory corruption
+----------------------------------
+* mprotect and friends.
+* shaking things up to find bugs.
+* padding to detect memory corruption.
+* malloc debugging in the standard library (mcheck(3))
+* dmalloc
+
+C-Pre processor (NTH)
+---------------------
+* var args macros
+* quoting in macros
+* writing type independant functions using the pre-processor.
+* list of out of the box defines
+
+Dynamic Shared Objects (NTH)
+----------------------------
+* How to prepare a DSO.
+* ldd, ld.so
+* Versions and dependencies of DSOs.
+* DSO and rpath.
+* GOT, PLT and DSO performance vs static library performance.
+* Weak symbols in C.
+* Resolver functions.
+* LD_LIBRARY_PATH, LD_PRELOAD, LD_RUN_PATH, ldconfig
+* dlopen(3), dlsym(3) and their performance.
+
+C technical issues (NTH)
+------------------------
+* 32<->64 bit issues and C programming.
+
+Performance in C (NTH)
+----------------------
+* inline.
+* compiler attributes for functions.
+* restricted pointers.
+* why you should use the standard libraries as much as possible.
+* using CPU specific libraries.
+* CPU cache lines and performance.
+
+Advanced topics in Make (NTH)
+-----------------------------
+* Non recursive make approach. 
+* Handling dependencies automatically for source files.
+* Managing a large project.
+
+Issues with large C projects (NTH)
+----------------------------------
+* h file organization in large projects.
+* private vs public h files.
+* helping the debugger find all your source code for debugging. 
+* versioning object files, libraries and executables.
+* building large projects.
+
+Measuring performance in C (NTH)
+--------------------------------
+* tools: callgrind, perf, oprofile, gperf
+* measuring it yourself: gettimeofday(), RDTSC
