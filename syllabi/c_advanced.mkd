@@ -119,3 +119,6 @@ Measuring performance in C (NTH)
 --------------------------------
 * tools: callgrind, perf, oprofile, gperf
 * measuring it yourself: gettimeofday(), RDTSC
+
+References:
+* [software design patterns](http://en.wikipedia.org/wiki/Software_design_pattern)
