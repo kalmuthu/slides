@@ -1,0 +1,29 @@
+This is a two day course on git and gerrit
+==========================================
+The objective is a good understand of git and it's differences/similarities
+to other source control systems + understanding of how to combine git
+with gerrit.
+
+The weight is 2/3 git and 1/3 gerrit.
+
+git
+===
+philosophy of git.
+understand branching in git.
+understand sha1 in git, treeish and more.
+
+gerrit
+======
+undestand the options that you have when you commit to gerrit and the build fails.
+	you can either add a commit and squash
+	or you can create a brand new commit with the fix.
+
+Installation requirements
+=========================
+gerrit server.
+	as VM?
+	as local linux?
+	on the web?
+github access.
+	or maybe we should have local git so that we could directly
+	pull and push.
