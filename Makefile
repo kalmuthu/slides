@@ -5,16 +5,6 @@
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALL_DEPS:=1
-# should we do the openoffice conversions?
-DO_SOFFICE:=1
-# -x: remove everything not known to git (not only ignore rules).
-# -X: remove files in .gitignore but not everything unknown to git
-# -d: remove directories also.
-# -f: force.
-# hard clean (may remove manually created files not yet added to the git index):
-GIT_CLEAN_FLAGS:=-xdf
-# soft clean (only removes .gitignore files)
-#GIT_CLEAN_FLAGS:=-Xdf
 
 #####################
 # end of parameters #
@@ -42,9 +32,7 @@ ODP_SRC:=$(shell find odp -name "*.odp")
 ODP_BAS:=$(basename $(ODP_SRC))
 ODP_PPT:=$(addsuffix .ppt,$(ODP_BAS))
 ODP_PDF:=$(addsuffix .pdf,$(ODP_BAS))
-ifeq ($(DO_SOFFICE),1)
-ALL:=$(ALL) $(ODP_PPT) $(ODP_PDF)
-endif
+ALL+=$(ODP_PPT) $(ODP_PDF)
 
 #########
 # rules #
@@ -59,17 +47,11 @@ $(ODP_PPT): %.ppt: %.odp $(ALL_DEPS)
 	$(Q)rm -f $@
 	$(Q)unoconv --format ppt $<
 	$(Q)chmod 444 $@
-#$(Q)scripts/DocumentConverter.py $< $@
 $(ODP_PDF): %.pdf: %.odp $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)unoconv --format pdf $<
 	$(Q)chmod 444 $@
-#$(Q)scripts/DocumentConverter.py $< $@
-
-.PHONY: soffice
-soffice:
-	$(Q)soffice "-accept=socket,port=2002;urp;" > /dev/null 2> /dev/null &
 
 .PHONY: debug
 debug:
@@ -81,4 +63,4 @@ debug:
 .PHONY: clean
 clean:
 	$(info doing [$@])
-	$(Q)git clean $(GIT_CLEAN_FLAGS) > /dev/null
+	$(Q)git clean -xdf > /dev/null
