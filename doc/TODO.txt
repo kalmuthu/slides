@@ -1,3 +1,5 @@
+- make a web site showing all of my slides using gh-pages
+	and embedding pdf in web pages.
 - make automatic upload to slideshare and scribd.
 - write slides about room for optimization.
 - write slides about allocating memory fast.
