@@ -10,6 +10,8 @@ import subprocess # for check_call
 packs=[
 	# for translating between various formats
 	'unoconv',
+	# for converting mkd files to html
+	'markdown',
 ]
 
 args=['sudo','apt-get','install','--assume-yes']

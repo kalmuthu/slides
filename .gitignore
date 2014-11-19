@@ -1,3 +1,4 @@
 /odp/*.pdf
 /odp/*.ppt
 /odp/.~lock.*
+/mkd/**/*.html
