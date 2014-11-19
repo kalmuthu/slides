@@ -1,7 +1,5 @@
-Syllabus for a C advanced course:
-=================================
-NTH: Nice To Have
-Anything which is not marked NTH is the main material.
+Topics for an advanced C course:
+================================
 
 Design patterns in C
 --------------------
@@ -18,7 +16,7 @@ Design patterns in C
 * Run time queries of types (with polymorphism).
 * techniques for avoiding client re compilation in C.
 * communication by registration of hooks.
-* exception handling in C. (NTH)
+* exception handling in C.
 
 List of patterns to consider (select the ones you want)
 -------------------------------------------------------
@@ -69,15 +67,15 @@ Memory leaks and memory corruption
 * malloc debugging in the standard library (mcheck(3))
 * dmalloc
 
-C-Pre processor (NTH)
----------------------
+C-Pre processor
+---------------
 * var args macros
 * quoting in macros
 * writing type independant functions using the pre-processor.
 * list of out of the box defines
 
-Dynamic Shared Objects (NTH)
-----------------------------
+Dynamic Shared Objects
+----------------------
 * How to prepare a DSO.
 * ldd, ld.so
 * Versions and dependencies of DSOs.
@@ -88,12 +86,12 @@ Dynamic Shared Objects (NTH)
 * LD_LIBRARY_PATH, LD_PRELOAD, LD_RUN_PATH, ldconfig
 * dlopen(3), dlsym(3) and their performance.
 
-C technical issues (NTH)
-------------------------
+C technical issues
+------------------
 * 32<->64 bit issues and C programming.
 
-Performance in C (NTH)
-----------------------
+Performance in C
+----------------
 * inline.
 * compiler attributes for functions.
 * restricted pointers.
@@ -101,22 +99,22 @@ Performance in C (NTH)
 * using CPU specific libraries.
 * CPU cache lines and performance.
 
-Advanced topics in Make (NTH)
------------------------------
+Advanced topics in Make
+-----------------------
 * Non recursive make approach. 
 * Handling dependencies automatically for source files.
 * Managing a large project.
 
-Issues with large C projects (NTH)
-----------------------------------
+Issues with large C projects
+----------------------------
 * h file organization in large projects.
 * private vs public h files.
 * helping the debugger find all your source code for debugging. 
 * versioning object files, libraries and executables.
 * building large projects.
 
-Measuring performance in C (NTH)
---------------------------------
+Measuring performance in C
+--------------------------
 * tools: callgrind, perf, oprofile, gperf
 * measuring it yourself: gettimeofday(), RDTSC
 
