@@ -2,3 +2,4 @@
 /odp/*.ppt
 /odp/.~lock.*
 /mkd/**/*.html
+/beamer/*.pdf

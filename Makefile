@@ -42,6 +42,13 @@ MKD_HTML:=$(addsuffix .html,$(MKD_BAS))
 ALL+=$(MKD_HTML)
 all: $(ALL)
 
+# beamer
+BEAMER_SRC:=$(shell find beamer -name "*.tex")
+BEAMER_BAS:=$(basename $(BEAMER_SRC))
+BEAMER_PDF:=$(addsuffix .pdf,$(BEAMER_BAS))
+ALL+=$(BEAMER_PDF)
+all: $(ALL)
+
 #########
 # rules #
 #########
@@ -67,6 +74,20 @@ $(MKD_HTML): %.html: %.mkd $(ALL_DEPS)
 	$(Q)rm -f $@
 	$(Q)markdown $< > $@
 	$(Q)chmod 444 $@
+# rules about beamer
+$(BEAMER_PDF): %.pdf: %.tex $(ALL_DEPS)
+	$(info doing [$@])
+	$(Q)scripts/wrapper_pdflatex.pl $< $@
+	$(Q)rm -f $(basename $<).log $(basename $<).aux $(basename $<).nav $(basename $<).out $(basename $<).snm $(basename $<).toc $(basename $<).vrb
+
+.PHONY: all_odp
+all_odp: $(ODP_PPT) $(ODP_PDF)
+
+.PHONY: all_mkd
+all_mkd: $(MKD_HTML)
+
+.PHONY: all_beamer
+all_beamer: $(BEAMER_PDF)
 
 .PHONY: debug
 debug:
@@ -77,6 +98,8 @@ debug:
 	$(info ODP_PDF is $(ODP_PDF))
 	$(info MKD_SRC is $(MKD_SRC))
 	$(info MKD_HTML is $(MKD_HTML))
+	$(info BEAMER_SRC is $(BEAMER_SRC))
+	$(info BEAMER_HTML is $(BEAMER_HTML))
 
 .PHONY: clean
 clean:

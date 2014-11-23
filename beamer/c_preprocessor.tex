@@ -1,0 +1,85 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+	\usetheme{Goettingen}
+	%\setbeamercovered{transparent}
+}
+
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage[usenames]{xcolor}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\title
+{C preprocessor}
+
+\subtitle
+{advanced tips and tricks}
+
+\author{Mark Veltzer \href{mailto:mark.veltzer@gmail.com}{mark.veltzer@gmail.com}}
+
+\AtBeginSubsection[]
+{
+	\begin{frame}<beamer>{Outline}
+	\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+	% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{one}
+
+\begin{frame}{Slide1}{subtitle of slide1}
+	\begin{itemize}
+		\item
+			Use \texttt{itemize} a lot.
+		\item
+			Use very short sentences or short phrases.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide2}
+\end{frame}
+
+\begin{frame}{Slide3}
+\end{frame}
+
+\begin{frame}{Slide4}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Slide with code}
+	\lstset{language=C++,
+basicstyle=\ttfamily,
+keywordstyle=\color{blue},
+stringstyle=\color{magenta},
+commentstyle=\color{blue},
+morecomment=[l][\color{magenta}]{\#}
+	}
+	\begin{lstlisting}
+	#include<stdio.h>
+	#include<iostream>
+	// A comment
+	int main(void)
+	{
+	    printf("Hello World\n");
+	    return 0;
+	}
+	\end{lstlisting}
+\end{frame}
+
+\end{document}
