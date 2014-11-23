@@ -118,5 +118,16 @@ Measuring performance in C
 * tools: callgrind, perf, oprofile, gperf
 * measuring it yourself: gettimeofday(), RDTSC
 
+C99 issues
+----------
+* TBD
+
+Multi-threading and Synchronization in C on Linux
+-------------------------------------------------
+* pthreads
+* compiler barriers and machine barriers
+* review of all synchronization mechanisms
+* transactional memory (new in core i7)
+
 References:
 * [software design patterns](http://en.wikipedia.org/wiki/Software_design_pattern)
