@@ -20,7 +20,7 @@ Design patterns in C
 
 List of patterns to consider (select the ones you want)
 -------------------------------------------------------
-* cretional
+* Cretional
 	- Factory
 	- Abstract Factory
 	- Factory method
