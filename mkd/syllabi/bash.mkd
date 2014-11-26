@@ -1,0 +1,19 @@
+1. Unix history.
+2. Operating system theory.
+3. Unix architecture.
+4. What is a shell ?
+5. shell families.
+6. ksh and bash.
+7. shell basics: single command and arguments, semi colons,
+	wildcards
+
+		Original goal: write once, compile everywhere
+
+		Richard Stallman: GNU, GPL
+
+Zero rule of OS design:
+
+An operating system is a piece of software that enables
+many process to run in parallel on a piece of hardware AND (this
+is the important part) MAKES SURE that the processes don't
+do harm to the operating system or to other processes.
