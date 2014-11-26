@@ -53,11 +53,25 @@ List of patterns to consider (select the ones you want)
 Debugging using gdb and friends
 -------------------------------
 * configuring source code locations.
-* calling functions
+* calling functions.
 * changing variables on the fly.
 * reverse debugging.
 * pretty printing of structures.
 * Hardware breakpoints as opposed to software ones.
+
+Various ways of allocation memory
+---------------------------------
+* malloc(3).
+* malloc(3) replacements for debugging and performance.
+* how malloc works and what are its problems.
+* obstacks.
+* pool per thread.
+* calling sbrk(2) or mmap(2) directly.
+* allocating on the stack: c99 style dynamic arrays.
+* allocating on the stack: alloca(3).
+* data segment: bss allocations.
+* date segment: initialized allocations.
+* data segment: const allocations.
 
 Memory leaks and memory corruption
 ----------------------------------
