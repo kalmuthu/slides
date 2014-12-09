@@ -107,7 +107,7 @@ Real time and the hardware
 	hardware built for real time
 	IO busses and real time
 	problems caused by the hardware (Self monitoring IRQs (SMIs) and similar issues)
-Hypervisons intro
+Hypervisors intro
 	Host-Guest OS terminology
 	Hypervisors
 	Virtualization technologies: Full Virtualization, Para-Virtualization, Os-Level Virtualization
