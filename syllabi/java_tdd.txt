@@ -1,0 +1,119 @@
+This is a syllabus for an extensive course in java TDD
+======================================================
+Pre-requisites: Java developers
+
+Objectives: People completing this course will have strong
+understanding of what TDD and Agile programming is all about
+with the knowledge to implement these development methodologies
+in their work environments. They will acquite the technical
+skills to use the tools that Java provides for these methodologies:
+JUnit, Eclipse facilities, Ant support for testing and many other
+third party tools that will be discussed in the development section.
+
+Theory part (no exercises)
+==========================
+01 Software Testing Overview
+	Testing Overview
+	Testing Fundamentals
+	Types of Tests
+	Test Techniques
+02 Introduction to Unit Testing
+	Unit Testing Overview
+	Unit Testing - why not?
+	Unit Testing - why Yes?
+	Beyond pure unit testing
+	Unit testing techniques
+03 Software Development Methodologies compared
+	Traditional methods:
+		Waterfall model
+		V model
+		Prototype model
+		Spiral model
+	Agile methods:
+		XP - eXtreme Programming
+		Test Driven Development
+04 Introduction to Agile development
+	Agile Overview
+	Agile Manifesto and Principles
+	Agile Modeling Practices
+	Agile Testing
+	User Stories
+	Automated Testing in Agile
+	Glossary of Agile Terms
+05 Extreme Programming
+	Traditional life cycle vs. XP
+	XP motto: "embrace change"
+	XP values
+	XP practices
+	Pair programming
+	More XP practices
+	An XP development road map
+06 Test Driven Development
+	Traditional Software Testing
+	Functional/Regression/Integration/Unit testing
+	The "Test First" approach
+	Automated Testing
+07 Test Doubles
+	What is a "Test Double"?
+	Creating and using Mock objects
+
+Practical Part
+==============
+08 JUnit (big chapter, 2 days with exercises)
+	Creating unit tests with JUnit.
+	EXERCISE:
+		Getting to know JUNIT.
+		Writing simple tests and running them.
+		Objective: the participants will write their first JUnit tests. They will get
+		to know the eclipse facilities for JUnit.
+	Advanced JUnit topics:
+		Test hierarchies
+		common fixtures
+		best practices
+		common pitfalls
+	EXERCISE:
+		Writing good tests.
+		Writing good tests for a lecturer provided Java module.
+		Objective: learn how to write the tests *CORRECTLY* so that they will cover
+		as much of the functionality as possible.
+	Using JUnit with Ant
+	EXERCISE:
+		Running ant for automated unit tests with reporting
+		Objective: learn how to write your tests in such a way as to be easily runnable
+		from ant. Learn how to produce test run results from ant in several formats.
+
+BIG EXERCISE: learning to refactor code for testing
+	The lecturer will provide a "badly" written code which is hard to test.
+	The students will need to refactor the code, while preserving it's
+	funtionality, in order to make it "test ready" and write tests for it.
+	Then the students will write tests for it covering as much of the functionality
+	as possible.
+	The exercise will be followed by a discussion of the various strategies and Java
+	features that can be used to achieve such refactoring (extracting interfaces,
+	creating parent classes, inner classes, anonymous classes, etc) with their
+	relative advantages/disadvantages.
+
+09 Technologies: JUnitEE, DbUnit, JMockit, PMD
+	JUnitEE
+		Configuring a JEE project with JUnitEE
+		Doing basic tests
+		Doing smart tests
+		JUnitEE TestRunner
+		JUnitEE Ant tasks
+		Security issues
+	DbUnit
+		Best practices when testing with a database
+		Cleaning a database
+		Importing/exporting a dataset
+	JMockit
+		The theory behind Jmockit
+		Jmockit by example
+		EXERCISE:
+			Use Jmockit to redo the big exercise.
+			The idea is to see how Jmockit eases the developers job
+			using annotations, dependency injection and the like.
+	PMD
+		What is PMD for?
+		Using PMD from the command line
+		Using PMD from ant
+		Using PMD from eclipse
