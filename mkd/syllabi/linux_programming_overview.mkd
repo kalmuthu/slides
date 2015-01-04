@@ -1,0 +1,79 @@
+Linux programming overview
+==========================
+
+Protected OS fundamentals
+-------------------------
+* Definition of protected operating system.
+* How does a protected operating system work.
+* The implications:
+	1. Commercial.
+	2. Debugging.
+	3. Stabilty.
+	4. Security.
+	5. Multi-user.
+
+Basics of writing code
+----------------------
+* C and C++ filename conventions.
+* Writing a program.
+* Writing a library.
+* Basics of makefiles.
+
+Linux multi-processing
+----------------------
+* Process number 1.
+* Forking and creating new processes.
+* Adoption and zombies.
+* Signals basics.
+* Killing processes.
+* Process groups.
+
+Linux IPC
+---------
+* POSIX shared memory.
+* POSIX message queue.
+* POSIX semaphore.
+* BSD and UNIX sockets.
+* Using inter-thread mechanisms in shared memory for efficiency.
+
+Linux multi-theading
+--------------------
+* Linux has no threads - the linux implementation of threads.
+* Launching threads:
+	1. Simple.
+	2. With attributes.
+* Ids of threads: pthread id vs tid vs pid.
+* Mechanisms for multi-thread communication:
+	1. mutex.
+	2. spinlocks.
+	3. barriers.
+	4. conditions.
+	5. readers/writer locks.
+	6. atomic variables.
+	7. lock free algorithms.
+	8. RCU libraries and more.
+* How to stop a thread?
+	1. killing threads is bad.
+	2. cancelling a thread.
+	3. preventing cancellation.
+	4. breaking out of system calls.
+
+Debugging using gdb and friends
+-------------------------------
+* Compiling code to be debuggable.
+* Configuring source code locations.
+* Efficiency of debugging.
+* Calling functions while debugging.
+* Changing variables on the fly.
+* Reverse debugging.
+* Pretty printing of structures.
+* Hardware breakpoints as opposed to software ones.
+* Hardware watchpoints as opposed to software ones.
+
+Other toos for debugging
+------------------------
+* /proc, /sys and friends.
+* ps, top and friends.
+* strace, ltrace and friends.
+* valgrind, cachegrind and friends.
+* Logging approaches and the system logger.
