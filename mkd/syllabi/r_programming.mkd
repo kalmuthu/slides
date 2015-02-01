@@ -1,0 +1,36 @@
+R programming course:
+=====================
+
+Introduction to R
+-----------------
+* What is R?
+* Getting & Installing R
+* The R User Interface
+* R Packages
+* R-Hadoop
+
+R basics
+--------
+* Basic Objects and Data Types
+* Input and output:
+	- Reading/Writing CSV files
+	- Reading data from HTML tables
+	- Reading from MySQL databases
+* Matrices, Arrays, Data Frames, and Factors
+* Data transformations
+
+Graphics with R
+---------------
+* Plotting Data in R 
+* Grid, bar chart, histogram, box plot
+* Plotting multiple datasets.
+* Graphing a function
+
+General statistics with R
+-------------------------
+* Summarizing the data.
+* Calculating relative frequencies.
+* Converting data to Z-Scores.
+* Testing the mean of a sample (t test)
+* Finding confidence interval for the mean.
+* Testing for normality
