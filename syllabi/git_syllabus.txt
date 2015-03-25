@@ -1,0 +1,74 @@
+Git syllabus (2 days)
+
+Git philosophy
+	What is source control?
+	Different approaches to source control.
+	Centralized vs Distributed source control.
+	Local version control systems.
+	History of git.
+	The open source nature of git and the design of git.
+Installing and configuring git
+	Linux (cmd line)
+	Windows (TortoiseGit)
+	Windows (Cygwin)
+	Windows (msysgit)
+	Eclipse (egit)
+	Other options.
+	First time configuration.
+	Getting help.
+	Books.
+Git basics
+	Getting a repository.
+	Creating a repository.
+	Recording changes to a repository.
+	Commiting.
+	Viewing the commit history.
+	Undoing things.
+	Working with remotes.
+	Tagging.
+	.gitignore
+	Tips and Tricks.
+Git concepts
+	Repositories
+	Objects
+	Index
+	Content-Addressable Names
+	Git Tracks content.
+	Pathname Versus Content
+	Git and SHA1
+Branching
+	What a branch is
+	Basic branching and merging
+	Branch management
+	Branching workflows
+	Remote branches.
+	Rebasing.
+Distributed git
+	Distributed workflows
+	Contributing to a project
+	Maintaning a project.
+git tools
+	revision selection
+	interactive staging
+	stashing
+	rewriting history
+	debugging with git
+	submodules
+	subtree merging.
+Customizing git
+	configuration
+	attributes
+	hooks
+	enforcing policy
+Git internals
+	plumbing and porcelain
+	git objects
+	git references
+	packfiles
+	transfer protocols
+	maintainanace and data recovery
+external tools
+	gitk
+	gitweb
+	gerrit
+	eclipse
