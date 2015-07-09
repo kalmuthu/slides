@@ -1,0 +1,48 @@
+Cloud and CloudFoundry
+======================
+
+Course duration 40 hours/5 days
+
+The client needs to select the programming language for this
+course. Currently it is: python.
+The client also need to select a development environment.
+
+Course Description and objectives
+---------------------------------
+The course will introduce the cloud to cloud newbie developers.
+It will explain the theory behind modern cloud environments, why
+they are needed, what they are good at, what deficiencies do they
+have, what are the differences between them. The participants
+will also get practical experience creating basic applications
+for the cloud and deploying them.
+A secondary topic that will be discussed is containers and
+microservices. Theory of these will be discussed and hands on
+practice will follow.
+
+Prerequisites
+-------------
+* Experience in developing web and enterprise applications in any
+platform (.NET, JEE, Ruby-On-Rails, Django-python, ...).
+* Basic knowledge of the programming language to be chosen (python).
+* Some cloud computing concepts knowledge is recommended but not required.
+
+Intended Audience
+-----------------
+Web and enterprise developers with understanding of web application
+design and implemetation on any platform (.NET, JEE, Ruby-On-Rails, Django-python, ...).
+
+Syllabus
+--------
+* day 1 
+	- Cloud Development Philosophy and trends
+	- IaaS/PaaS/SaaS
+	- Private cloud vs public cloud
+	- Review of different cloud providers: AWS, GAE, AZURE, CloudFoundry
+	- Review of migrating your apps to the cloud
+* day 2+3
+	- Hands on exercises on CloudFoundry using python.
+* day 4
+	- Containers and microservices theory.
+	- Hands on for Containers and microservices on CloudFoundry.
+* day 5
+	- Continue: Hands on for Containers and microservices on CloudFoundry.
