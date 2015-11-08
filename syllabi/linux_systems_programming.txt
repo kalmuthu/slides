@@ -16,25 +16,26 @@ Experience in C programming is a must.
 Course Duration:
 ================
 7 days with exercises.
+The chapters marked with (core) together make up a 5 day course.
 5 days for very good students who don't mind material pouring down their heads
 at the speed of sound and lack of exercises.
 
 Topics:
 =======
-Protected operating system theory.
+Protected operating system theory (core)
 	Protectd OS definition.
 	Why is the definition important?
 	How does privelege work?
 	How does memory protection work?
 	How do system calls work?
-Tools (this chapter is needed for the following exercises).
+Tools (this chapter is needed for the following exercises) (core)
 	The gcc compiler.
 	Some make syntax.
 	Compiling apps.
 	Compiling libraries.
 	Making the apps find the libraries.
 	Best practices.
-Processes
+Processes (core)
 	The process tree.
 	/sbin/init and startup/shutdown.
 	Creating processes.
@@ -58,7 +59,7 @@ Processes
 		Controlling terminals.
 		Writing your own process reapers.
 		Children getting signals about their parents dying.
-Pipes
+Pipes (core)
 	What is a pipe / fifo.
 	The pipe() system call.
 	EOF condition.
@@ -77,7 +78,7 @@ Allocating memory
 	TLS.
 	obstacks
 	allocating on the stack (alloca(3) and C99 stack allocation).
-Signal Handling.
+Signal Handling (core)
 	Why signals?
 	The problems created by asynchronous delivery.
 	Overcoming the async problem of signals.
@@ -98,7 +99,7 @@ Real time signals
 	The solution.
 	Queuing real time signals.
 	Real time signals and queues in Linux.
-Threads
+Threads (core)
 	The pthread library.
 	Creating threads.
 	Waiting for threads to die.
@@ -115,7 +116,7 @@ Threads
 	cancellation facilities
 	thread affinities.
 	threads are not file descriptors and what can you do about it.
-File API
+File API (core)
 	The per process file descriptor table.
 	open/read/write/close
 	Explanation of the semantics of read/write.
@@ -130,7 +131,7 @@ File API
 	Symbolic links.
 	Other file types.
 	Advanced: passing file desctiptors amongst unrelated processes.
-The IO subsystem
+The IO subsystem (core)
 	How does it work?
 	The kernel page and buffer caches.
 	The performance of the io subsystem
@@ -142,12 +143,12 @@ Sys V IPC.
 	Shared Memory
 	Message queues
 	Performance compared to POSIX equivalents.
-POSIX IPC.
+POSIX IPC (core)
 	Semaphores
 	Shared Memory
 	Message queues.
 	Performance compared to SYS V equivalents.
-Networking
+Networking (core)
 	Writing SOCK_STREAM (TCP) servers and clients.
 	Writing SOCK_DGRAM (UDP) apps.
 	The various domains
@@ -162,7 +163,7 @@ Time
 	Working with the right clock.
 	timerfd(2) - a file descriptor for a clock.
 	Measuring very short functions accurately.
-Multiplexing IO
+Multiplexing IO (core)
 	What is the problem to solve?
 	What are the two possible solutions (multiplexing and ioports) and why is multiplexing better.
 	The various APIs for multiplexing in Linux (select, poll, epoll).
