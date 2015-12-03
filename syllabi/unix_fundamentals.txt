@@ -1,0 +1,147 @@
+Summary:
+========
+This course is about the UNIX operating systems structure. It deals with how the system
+is build together, from what components, how basic security works etc. Because this subject
+is very theoretical, and because in practice people who deal with UNIX need knowledge of
+the command line, this course also introduces the shell interface to the UNIX system and
+teaches how to use this command line effectively. This command line knowledge enables
+both day to day working with the system and to better explore and understand in practice
+the theoretical aspects of the underlying operating system.
+
+This course is suitable for many types of UNIX systems: BSD flavours, SYSV flavours, AIX,
+Solaris, HP-UX, Linux, UnixWare and more. Please note that the course does not explain
+the particulars of any of these systems but rather dwels on their common features.
+
+Requirements:
+=============
+No special requirements for this course.
+
+Intended audience:
+==================
+- people who are new to working with the UNIX operating system.
+- people who want to find their way around the command line.
+- programmers who are unfamiliary with the basics of UNIX or the command line.
+- quality assurence, monitoring, profiling and debugging people who want to familiarize themselves with UNIX and it's command line usage.
+- anyone interested in fundamentals of the UNIX operating system. 
+* This course is not a development course. It does not deal with the C/C++ programming APIs. Just with the command line.
+If you are in need of such a course consider some UNIX (systems) programming course. Take note that such a course is
+usually better undertaken with the knowledge of this course already internalized.
+
+Course Duration:
+================
+2 to 3 days. 2 days for just the material and 3 days if exercises are included on every topic.
+
+Topics:
+=======
+Introduction to UNIX
+	What is UNIX
+	History of UNIX
+	Operating system core structure
+	The process tree
+		Why is it important?
+		Adoption by init
+		Zombies
+		What are system calls?
+	Basic security
+		file system security
+		processes as separate boxes
+	The root user
+		Not different from regular user
+		System calls do not get refused
+
+The basics
+	Logging in/out
+	Changing your password
+	Command structure
+	Simple commands
+	Control characters
+
+File system
+	Basic structure
+	Paths
+	Home directories
+	Moving around commands (cd, PWD, pushd, popd
+
+Shells
+	Why a shell?
+	The two main families of shells (csh, sh/ksh)
+	defining shell variables (csh and sh/ksh).
+	exporting as environment variables (csh and sh/ksh).
+	command line substitution (csh and sh/ksh).
+	glob patterns on the command line (csh and sh/ksh).
+	redicrection of input, output and errors. (csh and sh/ksh).
+	aliases (csh and sh/ksh).
+	pipes (csh and sh/ksh).
+	command history (csh and sh/ksh).
+	session initialization files.
+
+Manipulating files, folders, and whole disks
+	ls
+	cat, more, head, tail, tee
+	wc, diff
+	touch
+	mkdir, rmdir
+	mv, cp
+	df, du
+
+Files in details
+	File types in UNIX (7 types).
+	The inode concept
+	ls and inodes
+	Symbolic links (ln -s)
+	Hard links (ln)
+
+Security in practice
+	UNIX accounts.
+	The /etc/passwd and /etc/shadow files.
+	File ownership.
+	Directory and file access modes.
+	How File and Directory access is determined.
+	Changing modes and ownership (chmod, chown) in symbolic and octal forms.
+	umask
+
+The "vi" text editor
+	Introduction to vi
+	The vi command
+	vi modes
+	insert mode
+	moving around
+	command mode
+	command commands
+	search and replace
+
+Power tools
+	What are power tools good for?
+	find, grep, cut, sort, uniq, tr, sed, xargs
+	Exercise with power tools.
+
+Process management
+	The ps command
+	Finding the pid of a process
+	Sending a signal to a process (kill).
+	Monitoring processes with top.
+	Dealing with zombies in practice.
+	The shell and jobs.
+
+Networking basics
+	The client/server model.
+	ifconfig, ifup, ifdown
+	telnet, rlogin, rcp, rsh, trust
+
+Shell scripting introduction (in sh/ksh family of shells)
+	Writing your first shell script
+	Variables
+	Command line arguments
+	Mathematical operations
+	Exit status and error handling
+	Expressions, operators and conditions
+	Flow control (test, if, elif, case)
+	Loops (for while until)
+
+If time permits:
+
+The UNIX init scripts
+	How the UNIX system boots
+	SysV init system
+	rc.local and adding your own initialization code
+	writing your own /etc/init.d script
