@@ -1,0 +1,7 @@
+1. WebWorkers in extjs context or not.
+2. Custom widgets with dom construction in extjs.
+3. new async APIs in extjs.
+4. update slides for extjs 6.0 (including MVVM).
+
+On your side:
+Javascript, a little object oriented javascript,
