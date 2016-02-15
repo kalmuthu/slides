@@ -1,7 +1,7 @@
-Monitoring and debugging in the Linux environment
-
-Description: This course is intended for programmers who wish to monitor or debug
-their C/C++ apps on a Linux system, tune their Linux system to their needs, Modify
+Monitoring Tuning and Debugging in the Linux environment
+========================================================
+Description: This course is intended for developers who wish to monitor or debug
+their apps on a Linux system, tune their Linux system to their needs, Modify
 the boot process and more.
 
 Objectives:
@@ -14,22 +14,20 @@ Objectives:
 - Learn how to find problems using these monitoring tools.
 
 Prerequisites:
-- Knowledge of command line Unix or Linux.
-- C/C++ programming is a real advantage and even a prerequisite since this is an in depth course.
+- Knowledge of command line on Unix or Linux.
+- C/C++ programming is a real advantage and a must for some of the advanced chapters.
 
 What this course does not cover:
 - writing scripts
 - interacting with the shell
 - login/logout
-- using debugger (local or remote)
+- using a debugger (local or remote)
 
-Last 3 chapters are optional and will be done at the cost of emitting practical exercises.
-
-Duration: 3 days
+Full duration (for all materials): 3 days
 
 Topics
 ======
-Kernel introduction
+Kernel introduction (advanced chapter - only for developers, not for QA people)
 	The definition of a kernel
 	Basics of kernel implementation
 	Kernel/userspace interface (syscalls, virtual filesystems, libc)
@@ -37,24 +35,38 @@ Kernel introduction
 	The Linux scheduler (OTHER, FIFO, RR)
 	Different kernel contexts (passive, interrupt, kernel threads)
 	Different userspace contexts (regular, signal)
-Monitoring memory
+Monitoring/Tuning/Debugging theory
+	The 3 bottle necks: memory, CPU, IO
+	IO division: network vs disk
+	Difference between monitoring tools and benchmarking tools.
+Monitoring processes
+	Linux processes hierarchy
+	init as parent of all
+	bootup and shutdown
+	parent/child relationship
+	fork implementation (advanced)
+	What are zombies? How do you identify them? How do you handle them?
+	how does /proc work
+	the /proc folder per app
+	strace (standalone and attaching), mtrace, ltrace.
+	What is a software watchdog?
+	Writing a simple linux watchdog
+	Using inittab for simple watchdogging
+	kill -9 vs kill -15. What to use? Why? Could they fail?
+Monitoring system memory
 	top, ps and more
 	How the OS allocates RAM
 	Being not lazy in RAM allocation
 	Swap (adding, removing, monitoring)
 	To swap or not to swap
-Monitoring applications
+Monitoring cpu
 	ps and it's many options
-	how does /proc work
-	the /proc folder per app
-	What are zombies? How do you identify them? How do you handle them?
+	How many CPUs do I have?
+	What apps are running on what CPU?
 	Controlling affinity of apps
+	time(1) and understanding how the OS counts CPU time.
 	Limiting apps resources
-	strace (standalone and attaching), mtrace, ltrace.
 	top and it's many options
-	What is a software watchdog?
-	Writing a simple linux watchdog
-	Using inittab for simple watchdogging
 	How does the Linux scheduler work? nice(1), chrt(1)
 Monitoring disk
 	The mount paradigm
@@ -84,18 +96,19 @@ Monitoring network
 	tap devices.
 	routing
 	tools (tcpdump, wireshark and more)
-Monitoring the kernel
+Monitoring the kernel (advanced)
 	Seeing kernel threads in ps
 	Examining interrupts
 	Controlling affinity of interrupt handles
-	Interrupt load balancing
+	Interrupt load balancing and irqbalance(1)
 	Controlling affinity of kernel threads
 	Modules: loading, unloading, monitoring
+	kernel command line
 	sysctl
-	real time patch: controlling affinity and priority of interrupt handlers
+	/proc and /sys for tuning the kernel
 	udev + demo of udev.
 	getting hw info: lspci, lsusb, dmidecode, ...
-The boot process (optional)
+The boot process (advanced)
 	The BIOS
 	The bootloader
 	Configuring grub
@@ -106,13 +119,13 @@ The boot process (optional)
 	Upstart
 	inittab and how it works
 	initrd and initramfs
-Embedded Linux systems (optional)
+Embedded Linux systems (advanced)
 	uboot in detail
 	How embedded systems get built? (top down, bottom up)
 	Quick review: ptxdist, buildroot, android, yocto, gentoo, distros
 	busybox
 	libc replacements
-RPC (optional)
+RPC (advanced)
 	basics
 	portmapper
 	rpcgen
