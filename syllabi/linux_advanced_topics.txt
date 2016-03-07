@@ -1,0 +1,44 @@
+This is a syllabus for a one day seminar for Rafael on various advanced Linux subjects
+
+Prerequisites:
+==============
+- C programming
+- Linux systems programming
+- Linux real time programming
+
+Target Audience:
+================
+- Advanced Linux C/C++ programmers who want to write high
+	performance or low latency applications over Linux.
+
+Notes:
+======
+- All this may not fit in one day. Tell me your priorities.
+
+Topics:
+=======
+- using the CPU to the max
+	mmx, sse, simd
+	transactional memory on Linux
+- advanced synchronization topics:
+	futexes
+	robust futexes
+	pthread barriers
+	pthread spinlocks
+	pthread readers/writer locks
+	RCU in user space
+- advanced APIs in Linux
+	cgroups
+	namespaces
+	containers
+	memoryfd
+- multiplexing in Linux: epoll
+	timer fds
+	signal fds
+	event fds
+	real time signals
+	communicating with the kernel (AF_NETLINK)
+- malloc performance
+	how malloc allocates large vs small areas of memory
+	arenas in malloc
+	the process mm mutex in the kernel.
