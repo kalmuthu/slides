@@ -1,0 +1,46 @@
+Introduction to hadoop
+	Why hadoop?
+	Hadoop overview
+	HDFS
+	Map/Reduce
+	Hands on: launching hadoop and a map reduce job on it.
+ETL basics
+	Brining in data to hadoop.
+	Organizing your data.
+Pig introduction:
+	What is Pig?
+	Features
+	Use cases
+	Interacting with pig.
+	Demo by the instructor of pig processing.
+Hive introduction
+	What is Hive?
+	Hive schema and data storage
+	Hive vs RDBMS
+	When to use Hive?
+	Interacting with hive.
+	Hands on: launching hive with pre-given schema and issuing queries
+Hive as relational data
+	databases, tables
+	HiveQL
+	Data types
+	performing joins
+	built in functions
+Hive data management
+	Hive Data Formats
+	Creating databases with Hive managed tables
+	Loading data
+	Changing the schema
+	Views
+	Storing results
+Hive and text:
+	Overview of text processing
+	String functions
+	Regular expressions
+	Sentiments and N-Grams
+Hive optimization:
+	Query performance
+	Job execution plans
+	Partitioning
+	Bucketing
+	Indexing
