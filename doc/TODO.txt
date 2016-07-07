@@ -1,3 +1,5 @@
+- try to use asciidoc and a2x for my slides.
+
 - write slides and examples about tuning the glibc malloc library.
 	use the information from the examples of glibc malloc in the demos-linux repo.
 - make a web site showing all of my slides using gh-pages

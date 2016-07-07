@@ -14,6 +14,8 @@ packs=[
 	'markdown',
 	# for beamer presentations
 	'texlive-latex-base',
+	# for asciidoc presentations
+	'asciidoc',
 ]
 
 args=['sudo','apt-get','install','--assume-yes','--force-yes']
