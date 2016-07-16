@@ -1,3 +1,6 @@
+- make -j 8 doesn't work with the odp to ppt and pdf conversions.
+	try to make it work.
+
 - try to use asciidoc and a2x for my slides.
 
 - write slides and examples about tuning the glibc malloc library.

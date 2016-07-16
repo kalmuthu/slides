@@ -1,5 +1,8 @@
-/odp/**/*.pdf
-/odp/**/*.ppt
-/odp/.~lock.*
-/mkd/**/*.html
-/beamer/*.pdf
+#/odp/**/*.pdf
+#/odp/**/*.ppt
+#/odp/.~lock.*
+#/mkd/**/*.html
+#/beamer/*.pdf
+
+# all output files
+/out
