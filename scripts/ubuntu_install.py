@@ -14,7 +14,7 @@ packs=[
 	'markdown',
 	# for beamer presentations
 	'texlive-latex-base',
-	# for asciidoc presentations
+	# for asciidoc presentations (a2x(1))
 	'asciidoc',
 ]
 

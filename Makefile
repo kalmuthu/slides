@@ -13,6 +13,8 @@ DO_FMT_ODP_PDF:=1
 DO_FMT_MKD_HTML:=1
 # do you want to do 'pdf' from 'tex'?
 DO_FMT_TEX_PDF:=1
+# do you want to do 'pdf' from 'txt'?
+DO_FMT_TXT_PDF:=1
 
 ########
 # code #
@@ -46,7 +48,6 @@ endif
 ifeq ($(DO_FMT_ODP_PDF),1)
 ALL+=$(ODP_PDF)
 endif
-all: $(ALL)
 
 # markdown
 MKD_SRC:=$(shell find mkd -name "*.mkd")
@@ -55,7 +56,6 @@ MKD_HTML:=$(addprefix out/,$(addsuffix .html,$(MKD_BAS)))
 ifeq ($(DO_FMT_MKD_HTML),1)
 ALL+=$(MKD_HTML)
 endif
-all: $(ALL)
 
 # beamer
 TEX_SRC:=$(shell find beamer -name "*.tex")
@@ -64,7 +64,14 @@ TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
 ifeq ($(DO_FMT_TEX_PDF),1)
 ALL+=$(TEX_PDF)
 endif
-all: $(ALL)
+
+# slidy
+TXT_SRC:=$(shell find slidy -name "*.txt")
+TXT_BAS:=$(basename $(TXT_SRC))
+TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
+ifeq ($(DO_FMT_TXT_PDF),1)
+ALL+=$(TXT_PDF)
+endif
 
 #########
 # rules #
@@ -74,7 +81,7 @@ all: $(ALL)
 .PHONY: all
 all: $(ALL)
 
-# rules about odps
+# odps
 $(ODP_PPT): out/%.ppt: %.odp $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)rm -f $@
@@ -87,19 +94,24 @@ $(ODP_PDF): out/%.pdf: %.odp $(ALL_DEPS)
 	$(Q)mkdir -p $(dir $@)
 	$(Q)unoconv --timeout 5 --output $@ --format pdf $<
 	$(Q)chmod 444 $@
-# rules about markdown
+# markdown
 $(MKD_HTML): out/%.html: %.mkd $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)markdown $< > $@
 	$(Q)chmod 444 $@
-# rules about beamer
+# beamer
 $(TEX_PDF): out/%.pdf: %.tex $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)scripts/wrapper_pdflatex.pl $< $@
 	$(Q)rm -f $(basename $@).log $(basename $@).aux $(basename $@).nav $(basename $@).out $(basename $@).snm $(basename $@).toc $(basename $@).vrb
+# slidy
+$(TXT_PDF): out/%.pdf: %.txt $(ALL_DEPS)
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)a2x -f pdf --destination-dir=$(dir $@) $< 2> /dev/null
 
 .PHONY: all_odp
 all_odp: $(ODP_PPT) $(ODP_PDF)
@@ -109,6 +121,9 @@ all_mkd: $(MKD_HTML)
 
 .PHONY: all_beamer
 all_beamer: $(TEX_PDF)
+
+.PHONY: all_slidy
+all_slidy: $(TXT_PDF)
 
 .PHONY: debug
 debug:
@@ -121,6 +136,8 @@ debug:
 	$(info MKD_HTML is $(MKD_HTML))
 	$(info TEX_SRC is $(TEX_SRC))
 	$(info TEX_HTML is $(TEX_HTML))
+	$(info TXT_SRC is $(TXT_SRC))
+	$(info TXT_PDF is $(TXT_PDF))
 
 .PHONY: clean
 clean:
