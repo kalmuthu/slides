@@ -18,6 +18,6 @@ packs=[
 	'asciidoc',
 ]
 
-args=['sudo','apt-get','install','--assume-yes','--force-yes']
+args=['sudo','apt-get','install','--assume-yes']
 args.extend(packs)
 subprocess.check_call(args)
