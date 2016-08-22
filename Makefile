@@ -87,6 +87,7 @@ endif
 .DEFAULT_GOAL=all
 .PHONY: all
 all: $(ALL)
+	@true
 
 # tools
 tools.stamp: apt.yaml
