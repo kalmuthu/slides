@@ -1,8 +1,4 @@
-#/odp/**/*.pdf
-#/odp/**/*.ppt
-#/odp/.~lock.*
-#/mkd/**/*.html
-#/beamer/*.pdf
-
 # all output files
 /out
+# stamp file for tools
+/tools.stamp

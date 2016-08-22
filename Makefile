@@ -15,6 +15,8 @@ DO_FMT_MKD_HTML:=1
 DO_FMT_TEX_PDF:=1
 # do you want to do 'pdf' from 'txt'?
 DO_FMT_TXT_PDF:=1
+# do the tools?
+DO_TOOLS:=1
 
 ########
 # code #
@@ -35,7 +37,12 @@ ifeq ($(DO_ALL_DEPS),1)
 ALL_DEPS:=Makefile
 else
 ALL_DEPS:=
-endif
+endif # DO_ALL_DEPS
+
+# tools
+ifeq ($(DO_TOOLS),1)
+ALL_DEPS+=tools.stamp
+endif # DO_TOOLS
 
 # odps
 ODP_SRC:=$(shell find odp -name "*.odp")
@@ -80,6 +87,12 @@ endif
 .DEFAULT_GOAL=all
 .PHONY: all
 all: $(ALL)
+
+# tools
+tools.stamp: apt.yaml
+	$(info doing [$@])
+	$(Q)templar_cmd install_deps
+	$(Q)make_helper touch-mkdir $@
 
 # odps
 $(ODP_PPT): out/%.ppt: %.odp $(ALL_DEPS)
