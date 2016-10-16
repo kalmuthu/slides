@@ -4,7 +4,7 @@
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
-DO_ALL_DEPS:=1
+DO_ALL_DEP:=1
 # do you want to do 'ppt' from 'odp'?
 DO_FMT_ODP_PPT:=1
 # do you want to do 'pdf' from 'odp'?
@@ -33,15 +33,15 @@ Q:=@
 endif # DO_MKDBG
 
 # dependency on the makefile itself
-ifeq ($(DO_ALL_DEPS),1)
-ALL_DEPS:=Makefile
+ifeq ($(DO_ALL_DEP),1)
+ALL_DEP:=Makefile
 else
-ALL_DEPS:=
-endif # DO_ALL_DEPS
+ALL_DEP:=
+endif # DO_ALL_DEP
 
 # tools
 ifeq ($(DO_TOOLS),1)
-ALL_DEPS+=tools.stamp
+ALL_DEP+=tools.stamp
 endif # DO_TOOLS
 
 # odps
@@ -96,33 +96,33 @@ tools.stamp: apt.yaml
 	$(Q)make_helper touch-mkdir $@
 
 # odps
-$(ODP_PPT): out/%.ppt: %.odp $(ALL_DEPS)
+$(ODP_PPT): out/%.ppt: %.odp $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)unoconv --timeout 5 --output $@ --format ppt $<
 	$(Q)chmod 444 $@
-$(ODP_PDF): out/%.pdf: %.odp $(ALL_DEPS)
+$(ODP_PDF): out/%.pdf: %.odp $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)unoconv --timeout 5 --output $@ --format pdf $<
 	$(Q)chmod 444 $@
 # markdown
-$(MKD_HTML): out/%.html: %.mkd $(ALL_DEPS)
+$(MKD_HTML): out/%.html: %.mkd $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)markdown $< > $@
 	$(Q)chmod 444 $@
 # beamer
-$(TEX_PDF): out/%.pdf: %.tex $(ALL_DEPS)
+$(TEX_PDF): out/%.pdf: %.tex $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)scripts/wrapper_pdflatex.pl $< $@
 	$(Q)rm -f $(basename $@).log $(basename $@).aux $(basename $@).nav $(basename $@).out $(basename $@).snm $(basename $@).toc $(basename $@).vrb
 # slidy
-$(TXT_PDF): out/%.pdf: %.txt $(ALL_DEPS)
+$(TXT_PDF): out/%.pdf: %.txt $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)a2x -f pdf --destination-dir=$(dir $@) $< 2> /dev/null
