@@ -2,3 +2,7 @@
 /out
 # stamp file for tools
 /tools.stamp
+# python related
+__pycache__
+*.pyo
+*.pyc
